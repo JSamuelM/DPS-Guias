@@ -8,32 +8,45 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
+import {Card} from 'react-native-elements';
+
 const DATA = [
   {
     id: '1',
-    title: 'Toyota',
-    src: require('./src/img/toyota.jpg'),
+    title: 'Pupusas',
+    description: 'Frijol, queso, harina de arroz.',
+    src: require('./src/img/pupusas.jpg'),
   },
   {
     id: '2',
-    title: 'Mazda',
-    src: require('./src/img/mazda.jpg'),
+    title: 'Yuca Frita',
+    description: 'Yuca, curtido, salsa de tomate.',
+    src: require('./src/img/yuca.jpg'),
   },
   {
     id: '3',
-    title: 'Mitsubishi',
-    src: require('./src/img/mitsubishi.jpg'),
+    title: 'Gallina India',
+    description: 'Gallina, sopa, verduras.',
+    src: require('./src/img/gallina.jpg'),
   },
 ];
-const Item = ({title, img}) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-    <Image style={styles.img} source={img} />
-  </View>
+
+const Item = ({title, description, img}) => (
+  <Card>
+    <View style={styles.card}>
+      <Image style={styles.img} source={img} />
+      <View>
+        <Text style={styles.name}>{title}</Text>
+        <Text style={styles.description}>{description}</Text>
+      </View>
+    </View>
+  </Card>
 );
 
 const App = () => {
-  const renderItem = ({item}) => <Item title={item.title} img={item.src} />;
+  const renderItem = ({item}) => (
+    <Item title={item.title} description={item.description} img={item.src} />
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -56,18 +69,34 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
-    alignItems: 'center',
+    // alignItems: 'center',
   },
-  title: {
-    fontSize: 32,
+  body: {
+    backgroundColor: 'red',
+    width: '50%',
+  },
+  name: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  description: {
+    fontSize: 14,
+    fontWeight: '500',
+  },
+  card: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
   },
   img: {
-    width: 200,
+    width: 125,
     height: 125,
-    borderWidth: 2,
-    borderColor: '#d35647',
-    resizeMode: 'contain',
-    margin: 8,
+    borderRadius: 150 / 2,
+    overflow: 'hidden',
+    resizeMode: 'cover',
+    marginRight: 15,
   },
 });
 
