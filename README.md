@@ -22,10 +22,11 @@ Al acceder al siguiente enlace: [Pruebas React](https://github.com/JSamuelM/DPS-
 
 Listado de guias y tallers o parciales para la materia DPS
 
-| Número de Guía | Nombre de Guía                                | Enlace                                                                   | Ramas                           |
-| -------------- | --------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------- |
-| Guía - 02      | Introducción a React                          | [Guía-02](https://github.com/JSamuelM/DPS-Guias/tree/main/pruebas-react) | 02-procedimiento y 02-discusion |
-| Guía - 03      | Configuración entorno de trabajo React Native | [Guía-03](https://github.com/JSamuelM/DPS-Guias/tree/main/cars)          | 03-procedimiento y 03-discusion |
+| Número de Guía | Nombre de Guía                                | Enlace                                                                         | Ramas                           |
+| -------------- | --------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------- |
+| Guía - 02      | Introducción a React                          | [Guía-02](https://github.com/JSamuelM/DPS-Guias/tree/main/pruebas-react)       | 02-procedimiento y 02-discusion |
+| Guía - 03      | Configuración entorno de trabajo React Native | [Guía-03](https://github.com/JSamuelM/DPS-Guias/tree/main/cars)                | 03-procedimiento y 03-discusion |
+| Guía - 04      | Creación de componentes parte I               | [Guía-03](https://github.com/JSamuelM/DPS-Guias/tree/main/cotizador-prestamos) | 04-procedimiento y 04-discusion |
 
 ---
 
