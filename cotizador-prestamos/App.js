@@ -1,21 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import Form from "./src/components/Form";
+import Result from "./src/components/Result";
+
+import colors from "./src/utils/colors";
 
 export default function App() {
+  const [salary, setSalary] = useState(null);
+  const [netEarns, setNetEarns] = useState(0);
+
+  const calculate = () => {
+    let isssPercentage = salary * 0.03;
+    let afpPercentage = salary * 0.04;
+    let rentPercentage = salary * 0.05;
+
+    let net = salary - isssPercentage - afpPercentage - rentPercentage;
+
+    setNetEarns(net);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar barStyle="light-content" />
+      <SafeAreaView style={styles.Header}>
+        <Text style={styles.HeadApp}>Calculo del salario neto</Text>
+      </SafeAreaView>
+      <Form salary={setSalary} calculate={calculate} />
+      <Result salary={salary} netEarns={netEarns} />
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  Header: {
+    backgroundColor: colors.PRIMARY_COLOR,
+    height: 100,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  HeadApp: {
+    fontSize: 25,
+    fontWeight: "bold",
+    color: "#fff",
   },
 });
