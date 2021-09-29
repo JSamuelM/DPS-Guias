@@ -27,7 +27,8 @@ Listado de guias y tallers o parciales para la materia DPS
 | Guía - 02      | Introducción a React                          | [Guía-02](https://github.com/JSamuelM/DPS-Guias/tree/main/pruebas-react)       | 02-procedimiento y 02-discusion |
 | Guía - 03      | Configuración entorno de trabajo React Native | [Guía-03](https://github.com/JSamuelM/DPS-Guias/tree/main/cars)                | 03-procedimiento y 03-discusion |
 | Guía - 04      | Creación de componentes parte I               | [Guía-04](https://github.com/JSamuelM/DPS-Guias/tree/main/cotizador-prestamos) | 04-procedimiento y 04-discusion |
-| Guía - 05      | Creación de componentes parte II              | [Guía-05](https://github.com/JSamuelM/DPS-Guias/tree/main/citas)               | 04-procedimiento y 05-discusion |
+| Guía - 05      | Creación de componentes parte II              | [Guía-05](https://github.com/JSamuelM/DPS-Guias/tree/main/citas)               | 05-procedimiento y 05-discusion |
+| Guía - 06      | React Native Layout and Flexbox               | [Guía-06](https://github.com/JSamuelM/DPS-Guias/tree/main/agencia-viajes)      | 06-procedimiento y 06-discusion |
 
 ---
 
