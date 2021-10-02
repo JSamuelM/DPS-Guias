@@ -29,7 +29,8 @@ Listado de guias y tallers o parciales para la materia DPS
 | Guía - 04      | Creación de componentes parte I               | [Guía-04](https://github.com/JSamuelM/DPS-Guias/tree/main/cotizador-prestamos) | 04-procedimiento y 04-discusion |
 | Guía - 05      | Creación de componentes parte II              | [Guía-05](https://github.com/JSamuelM/DPS-Guias/tree/main/citas)               | 05-procedimiento y 05-discusion |
 | Guía - 06      | React Native Layout and Flexbox               | [Guía-06](https://github.com/JSamuelM/DPS-Guias/tree/main/agencia-viajes)      | 06-procedimiento y 06-discusion |
-| Guía - 07      | React Native Layout and Flexbox               | [Guía-07](https://github.com/JSamuelM/DPS-Guias/tree/main/navegacion)          | 07-procedimiento y 07-discusion |
+| Guía - 07      | React Navigation                              | [Guía-07](https://github.com/JSamuelM/DPS-Guias/tree/main/navegacion)          | 07-procedimiento y 07-discusion |
+| Guía - 08      | Aplicaciones usando API -GET                  | [Guía-08](https://github.com/JSamuelM/DPS-Guias/tree/main/paises)              | 07-procedimiento y 07-discusion |
 
 ---
 
