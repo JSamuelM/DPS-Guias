@@ -1,111 +1,63 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, {useEffect, useState} from 'react';
+import {Alert, StyleSheet, View} from 'react-native';
+import Formulario from './src/components/Formulario';
+import Pais from './src/components/Pais';
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+const App = () => {
+  const [busqueda, setBusqueda] = useState({
+    pais: '',
+  });
+  const [consultar, setConsultar] = useState(false);
+  const [resultado, setResultado] = useState({});
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  useEffect(() => {
+    const {pais} = busqueda;
+    const consultarPais = async () => {
+      if (consultar) {
+        const url = `https://servicodados.ibge.gov.br/api/v1/paises/${pais}`;
+        try {
+          const respuesta = await fetch(url);
+          const resultado = await respuesta.json();
+          setResultado(resultado);
+          setConsultar(false);
+        } catch (error) {
+          mostrarAlerta();
+        }
+      }
+    };
+    consultarPais();
+  }, [consultar]);
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const mostrarAlerta = () => {
+    Alert.alert('Error', 'No hay resultado intenta con otra ciudad o país', [
+      {
+        text: 'Ok',
+      },
+    ]);
+  };
+
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={styles.app}>
+      <View style={styles.contenido}>
+        <Formulario
+          busqueda={busqueda}
+          setBusqueda={setBusqueda}
+          guardarConsultar={setConsultar}
+        />
+        <Pais resultado={resultado} />
+      </View>
     </View>
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  app: {
+    flex: 1,
+    backgroundColor: 'rgb(71,149,212)',
+    justifyContent: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  contenido: {
+    margin: '2.5%',
   },
 });
 
