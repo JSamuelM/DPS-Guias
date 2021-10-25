@@ -31,7 +31,7 @@ Listado de guias y tallers o parciales para la materia DPS
 | Guía - 05      | Creación de componentes parte II              | [Guía-05](https://github.com/JSamuelM/DPS-Guias/tree/main/citas)               | 05-procedimiento y 05-discusion |
 | Guía - 06      | React Native Layout and Flexbox               | [Guía-06](https://github.com/JSamuelM/DPS-Guias/tree/main/agencia-viajes)      | 06-procedimiento y 06-discusion |
 | Guía - 07      | React Navigation                              | [Guía-07](https://github.com/JSamuelM/DPS-Guias/tree/07-discusion/navegacion)          | 07-procedimiento y 07-discusion |
-| Guía - 08      | Aplicaciones usando API -GET                  | [Guía-08](https://github.com/JSamuelM/DPS-Guias/tree/08-discusion/paises)              | 07-procedimiento y 07-discusion |
+| Guía - 08      | Aplicaciones usando API -GET                  | [Guía-08](https://github.com/JSamuelM/DPS-Guias/tree/08-discusion/paises)              | 08-procedimiento y 08-discusion |
 | Guía - 09      | WebView Parte I (Con expo.dev)                  | [Guía-09 Part I](https://https://snack.expo.dev/@jsammy/e68154)              | --- |
 | Guía - 09      | WebView Parte II (Con expo.dev)                  | [Guía-09 Part II](https://snack.expo.dev/@jsammy/guia09-mr171621-04l-partii)              | --- |
 | Guía - 09      | WebView                  | [Guía-09](https://github.com/JSamuelM/DPS-Guias/tree/09-discusion/webview)              | 09-discusion |
